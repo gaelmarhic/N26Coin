@@ -1,5 +1,4 @@
 include ':app'
-include ':base'
 include ':presentation'
 include ':domain'
 include ':data'
