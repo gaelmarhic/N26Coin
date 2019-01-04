@@ -2,6 +2,9 @@ apply from: "${rootDir}/buildsystem/java-module.gradle"
 
 dependencies {
 
+    // Modules
+    implementation project(":domain")
+
     // Kotlin
     implementation kotlinStandardLibrary
 
