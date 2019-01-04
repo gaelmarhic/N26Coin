@@ -1,8 +1,10 @@
-apply plugin: 'java-library'
+apply from: "${rootDir}/buildsystem/java-module.gradle"
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-}
 
-sourceCompatibility = "7"
-targetCompatibility = "7"
+    // Kotlin
+    implementation kotlinStandardLibrary
+
+    // Unit testing
+    testImplementation junit
+}

@@ -1,0 +1,16 @@
+ext {
+
+    // Kotlin
+    kotlinStandardLibrary = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
+
+    // Libraries
+    supportAppCompatV7 = "com.android.support:appcompat-v7:${supportLibrary_version}"
+    constraintLayout = "com.android.support.constraint:constraint-layout:${constraintLayout_version}"
+
+    // Unit testing
+    junit = "junit:junit:${junit_version}"
+
+    // Instrumentation testing
+    androidTestRunner = "com.android.support.test:runner:${androidTest_version}"
+    espresso = "com.android.support.test.espresso:espresso-core:${espresso_version}"
+}

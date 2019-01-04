@@ -1,0 +1,8 @@
+ext {
+    n26coinApplicationId = "com.gaelmarhic.n26coin"
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 28
+    androidCompileSdkVersion = 28
+    applicationVersionCode = 1
+    applicationVersionName = "1.0"
+}
