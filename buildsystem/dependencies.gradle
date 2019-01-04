@@ -3,9 +3,13 @@ ext {
     // Kotlin
     kotlinStandardLibrary = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
 
-    // Libraries
+    // Android libraries
     supportAppCompatV7 = "com.android.support:appcompat-v7:${supportLibrary_version}"
     constraintLayout = "com.android.support.constraint:constraint-layout:${constraintLayout_version}"
+
+    // Dagger
+    dagger = "com.google.dagger:dagger:${dagger_version}"
+    daggerCompiler = "com.google.dagger:dagger-compiler:${dagger_version}"
 
     // Unit testing
     junit = "junit:junit:${junit_version}"
