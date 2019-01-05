@@ -9,7 +9,7 @@ import com.gaelmarhic.di.application.DaggerApplicationComponent
  */
 class N26CoinApplication: Application() {
 
-    val applicationComponent: ApplicationComponent by lazy {
+    private val applicationComponent: ApplicationComponent by lazy {
         DaggerApplicationComponent
                 .builder()
                 .application(this)
