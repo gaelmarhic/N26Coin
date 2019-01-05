@@ -9,7 +9,7 @@ import com.gaelmarhic.di.application.DaggerApplicationComponent
  */
 class N26CoinApplication: Application() {
 
-    val component: ApplicationComponent by lazy {
+    val applicationComponent: ApplicationComponent by lazy {
         DaggerApplicationComponent
                 .builder()
                 .application(this)
@@ -18,6 +18,9 @@ class N26CoinApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        component.inject(this)
+        applicationComponent.inject(this)
+        applicationComponent.addPresentationComponent()
+        applicationComponent.addDomainComponent()
+        applicationComponent.addDataComponent()
     }
 }
