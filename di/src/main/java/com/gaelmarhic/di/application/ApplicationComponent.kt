@@ -2,8 +2,8 @@ package com.gaelmarhic.di.application
 
 import android.app.Application
 import com.gaelmarhic.di.data.common.DataComponent
-import com.gaelmarhic.di.domain.DomainComponent
-import com.gaelmarhic.di.presentation.PresentationComponent
+import com.gaelmarhic.di.domain.common.DomainComponent
+import com.gaelmarhic.di.presentation.common.PresentationComponent
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton

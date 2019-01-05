@@ -1,4 +1,4 @@
-package com.gaelmarhic.di.domain
+package com.gaelmarhic.di.presentation.common
 
 import dagger.Subcomponent
 
@@ -6,4 +6,4 @@ import dagger.Subcomponent
  * Created by Gaël Marhic on 05/01/2019.
  */
 @Subcomponent
-interface DomainComponent
+interface PresentationComponent
