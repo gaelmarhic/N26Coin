@@ -1,6 +1,6 @@
 package com.gaelmarhic.di.data.common
 
-import com.gaelmarhic.data.features.bitcoin.constants.Constants
+import com.gaelmarhic.data.common.constants.Constants
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
