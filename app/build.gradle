@@ -12,4 +12,7 @@ dependencies {
     // Modules
     implementation project(":di")
     implementation project(":presentation")
+
+    // Kotlin
+    implementation kotlinStandardLibrary
 }
