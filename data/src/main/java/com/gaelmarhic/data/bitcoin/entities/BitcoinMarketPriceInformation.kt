@@ -10,7 +10,7 @@ package com.gaelmarhic.data.bitcoin.entities
  * @property description The description of our current request.
  * @property values The list of market prices over time.
  */
-class BitcoinMarketPriceInformation(
+data class BitcoinMarketPriceInformation(
         val status: String,
         val name: String,
         val unit: String,

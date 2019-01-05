@@ -6,7 +6,7 @@ package com.gaelmarhic.data.bitcoin.entities
  * @property timestamp The exact timestamp corresponding to this [BitcoinMarketPrice] entry.
  * @property amount The bitcoin's value corresponding to the given [timestamp].
  */
-class BitcoinMarketPrice(
+data class BitcoinMarketPrice(
         private val timestamp: Long,
         private val amount: Float
 )
