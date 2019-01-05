@@ -11,8 +11,8 @@ import com.google.gson.annotations.SerializedName
 data class BitcoinMarketPriceRaw(
 
         @SerializedName("x")
-        private val timestamp: Long?,
+        val timestamp: Long?,
 
         @SerializedName("y")
-        private val amount: Float?
+        val amount: Float?
 )
