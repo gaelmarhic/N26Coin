@@ -5,6 +5,12 @@ dependencies {
     // Kotlin
     implementation kotlinStandardLibrary
 
+    // Rx
+    implementation rxJava2
+
+    // Options
+    implementation options
+
     // Unit testing
     testImplementation junit
 }
