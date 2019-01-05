@@ -3,5 +3,5 @@ apply plugin: 'kotlin'
 apply from: "${rootDir}/buildsystem/versions.gradle"
 apply from: "${rootDir}/buildsystem/dependencies.gradle"
 
-sourceCompatibility = "7"
-targetCompatibility = "7"
+sourceCompatibility = "8"
+targetCompatibility = "8"
