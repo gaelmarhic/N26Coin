@@ -6,5 +6,9 @@ import dagger.Subcomponent
 /**
  * Created by Gaël Marhic on 05/01/2019.
  */
-@Subcomponent(modules = [(NetworkModule::class), (BitcoinDataModule::class), (ProviderModule::class)])
+@Subcomponent(modules = [
+    (NetworkModule::class),
+    (ProviderModule::class),
+    (StoreModule::class),
+    (BitcoinDataModule::class)])
 interface DataComponent
