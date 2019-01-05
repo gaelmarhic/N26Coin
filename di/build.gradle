@@ -17,4 +17,7 @@ dependencies {
 
     // Rx
     implementation rxJava2
+
+    // Gson
+    implementation gson
 }

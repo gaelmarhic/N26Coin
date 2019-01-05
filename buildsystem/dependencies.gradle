@@ -14,6 +14,8 @@ ext {
     // Rx
     rxJava2 = "io.reactivex.rxjava2:rxjava:${rxJava2_version}"
 
+    // Gson
+    gson = "com.google.code.gson:gson:${gson_version}"
     // Unit testing
     junit = "junit:junit:${junit_version}"
 
