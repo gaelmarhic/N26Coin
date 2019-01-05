@@ -16,6 +16,11 @@ ext {
 
     // Gson
     gson = "com.google.code.gson:gson:${gson_version}"
+
+    // Retrofit2
+    retrofit2 = "com.squareup.retrofit2:retrofit:${retrofit2_version}"
+    retrofit2RxAdapter = "com.squareup.retrofit2:adapter-rxjava2:${retrofit2_version}"
+    retrofit2GsonConverter = "com.squareup.retrofit2:converter-gson:${retrofit2_version}"
     // Unit testing
     junit = "junit:junit:${junit_version}"
 

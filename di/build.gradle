@@ -20,4 +20,9 @@ dependencies {
 
     // Gson
     implementation gson
+
+    // Retrofit2
+    implementation retrofit2
+    implementation retrofit2RxAdapter
+    implementation retrofit2GsonConverter
 }
