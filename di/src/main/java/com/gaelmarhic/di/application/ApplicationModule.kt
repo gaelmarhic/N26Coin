@@ -1,6 +1,7 @@
 package com.gaelmarhic.di.application
 
 import android.app.Application
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 
@@ -11,5 +12,6 @@ import dagger.Provides
 class ApplicationModule {
 
     @Provides
-    fun provideApplicationContext(application: Application) = application.applicationContext
+    fun provideApplicationContext(application: Application): Context =
+            application.applicationContext
 }
