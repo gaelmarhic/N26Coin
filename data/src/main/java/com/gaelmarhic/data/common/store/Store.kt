@@ -27,14 +27,14 @@ interface Store<Value> {
      * @return Returns a [Maybe] with the [Value] wrapped inside.
      */
     fun get(): Maybe<Value>
+
+    /**
+     * Interface that should be used to implement a memory based store.
+     */
+    interface MemoryStore<Value>: Store<Value>
+
+    /**
+     * Interface that should be used to implement a disk based store.
+     */
+    interface DiskStore<Value>: Store<Value>
 }
-
-/**
- * Interface that should be used to implement a memory based store.
- */
-interface MemoryStore<Value>: Store<Value>
-
-/**
- * Interface that should be used to implement a disk based store.
- */
-interface DiskStore<Value>: Store<Value>
