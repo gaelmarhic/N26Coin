@@ -1,5 +1,6 @@
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 apply from: "${rootDir}/buildsystem/android-versions.gradle"
 apply from: "${rootDir}/buildsystem/versions.gradle"
 apply from: "${rootDir}/buildsystem/dependencies.gradle"
