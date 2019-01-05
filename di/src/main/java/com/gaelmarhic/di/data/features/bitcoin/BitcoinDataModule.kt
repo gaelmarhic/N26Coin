@@ -1,5 +1,6 @@
 package com.gaelmarhic.di.data.features.bitcoin
 
+import com.gaelmarhic.data.features.bitcoin.mappers.BitcoinMarketPriceInformationMapper
 import com.gaelmarhic.data.features.bitcoin.network.BitcoinService
 import dagger.Module
 import dagger.Provides
@@ -16,4 +17,8 @@ class BitcoinDataModule {
     @Singleton
     fun provideBitcoinService(retrofit: Retrofit): BitcoinService =
             retrofit.create(BitcoinService::class.java)
+
+    @Provides
+    fun provideBitcoinMarketPriceInformationMapper(): BitcoinMarketPriceInformationMapper =
+            BitcoinMarketPriceInformationMapper()
 }
