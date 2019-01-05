@@ -1,4 +1,4 @@
-package com.gaelmarhic.data.common
+package com.gaelmarhic.data.common.exceptions
 
 import java.lang.RuntimeException
 
