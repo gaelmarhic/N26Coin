@@ -25,4 +25,8 @@ dependencies {
     implementation retrofit2
     implementation retrofit2RxAdapter
     implementation retrofit2GsonConverter
+
+    // OkHttp3
+    implementation okHttp3
+    implementation okHttp3LoggingInterceptor
 }
