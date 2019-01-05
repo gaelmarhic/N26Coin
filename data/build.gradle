@@ -17,6 +17,9 @@ dependencies {
     // Retrofit2
     implementation retrofit2
 
+    // Options
+    implementation options
+
     // Unit testing
     testImplementation junit
 }

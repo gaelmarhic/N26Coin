@@ -26,6 +26,9 @@ ext {
     okHttp3 = "com.squareup.okhttp3:okhttp:${okHttp3_version}"
     okHttp3LoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${okHttp3_version}"
 
+    // Options
+    options = "com.github.tomaszpolanski:options:${options_version}"
+
     // Unit testing
     junit = "junit:junit:${junit_version}"
 
