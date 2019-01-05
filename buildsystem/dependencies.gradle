@@ -11,6 +11,9 @@ ext {
     dagger = "com.google.dagger:dagger:${dagger_version}"
     daggerCompiler = "com.google.dagger:dagger-compiler:${dagger_version}"
 
+    // Rx
+    rxJava2 = "io.reactivex.rxjava2:rxjava:${rxJava2}"
+
     // Unit testing
     junit = "junit:junit:${junit_version}"
 
