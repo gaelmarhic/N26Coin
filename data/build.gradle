@@ -8,6 +8,12 @@ dependencies {
     // Kotlin
     implementation kotlinStandardLibrary
 
+    // Rx
+    implementation rxJava2
+
+    // Retrofit2
+    implementation retrofit2
+
     // Unit testing
     testImplementation junit
 }
