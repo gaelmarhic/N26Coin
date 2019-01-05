@@ -4,6 +4,8 @@
     package="com.gaelmarhic.n26coin"
     tools:ignore="GoogleAppIndexingWarning">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".application.N26CoinApplication"
         android:allowBackup="false"
