@@ -1,7 +1,7 @@
 package com.gaelmarhic.di.application
 
 import android.app.Application
-import com.gaelmarhic.di.data.core.DataComponent
+import com.gaelmarhic.di.data.common.DataComponent
 import com.gaelmarhic.di.domain.DomainComponent
 import com.gaelmarhic.di.presentation.PresentationComponent
 import dagger.BindsInstance

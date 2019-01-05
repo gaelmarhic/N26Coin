@@ -1,4 +1,4 @@
-package com.gaelmarhic.di.data.core
+package com.gaelmarhic.di.data.common
 
 import com.gaelmarhic.data.bitcoin.constants.Constants
 import dagger.Module
