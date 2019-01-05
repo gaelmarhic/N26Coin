@@ -1,6 +1,6 @@
-package com.gaelmarhic.data.bitcoin.network
+package com.gaelmarhic.data.features.bitcoin.network
 
-import com.gaelmarhic.data.bitcoin.entities.BitcoinMarketPriceInformationRaw
+import com.gaelmarhic.data.features.bitcoin.entities.BitcoinMarketPriceInformationRaw
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

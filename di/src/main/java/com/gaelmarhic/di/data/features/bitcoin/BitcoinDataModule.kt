@@ -1,6 +1,6 @@
 package com.gaelmarhic.di.data.features.bitcoin
 
-import com.gaelmarhic.data.bitcoin.network.BitcoinService
+import com.gaelmarhic.data.features.bitcoin.network.BitcoinService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

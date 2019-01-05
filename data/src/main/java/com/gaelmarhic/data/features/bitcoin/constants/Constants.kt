@@ -1,4 +1,4 @@
-package com.gaelmarhic.data.bitcoin.constants
+package com.gaelmarhic.data.features.bitcoin.constants
 
 /**
  * Created by Gaël Marhic on 05/01/2019.

@@ -1,4 +1,4 @@
-package com.gaelmarhic.data.bitcoin.entities
+package com.gaelmarhic.data.features.bitcoin.entities
 
 import com.google.gson.annotations.SerializedName
 

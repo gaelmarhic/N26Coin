@@ -1,4 +1,4 @@
-package com.gaelmarhic.data.bitcoin.entities
+package com.gaelmarhic.data.features.bitcoin.entities
 
 /**
  * Created by Gaël Marhic on 05/01/2019.
