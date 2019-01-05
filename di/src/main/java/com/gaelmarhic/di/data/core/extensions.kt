@@ -1,4 +1,4 @@
-package com.gaelmarhic.di.data
+package com.gaelmarhic.di.data.core
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

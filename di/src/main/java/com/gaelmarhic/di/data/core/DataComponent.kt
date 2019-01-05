@@ -1,4 +1,4 @@
-package com.gaelmarhic.di.data
+package com.gaelmarhic.di.data.core
 
 import dagger.Subcomponent
 
