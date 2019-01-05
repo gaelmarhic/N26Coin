@@ -2,8 +2,8 @@ package com.gaelmarhic.data.features.bitcoin.mappers
 
 import com.gaelmarhic.data.common.exceptions.EssentialParamMissingException
 import com.gaelmarhic.data.common.constants.Constants.Companion.BLOCKCHAIN_API_OK_STATUS
-import com.gaelmarhic.data.features.bitcoin.entities.BitcoinMarketPrice
-import com.gaelmarhic.data.features.bitcoin.entities.BitcoinMarketPriceInformation
+import com.gaelmarhic.domain.features.bitcoin.entities.BitcoinMarketPrice
+import com.gaelmarhic.domain.features.bitcoin.entities.BitcoinMarketPriceInformation
 import com.gaelmarhic.data.features.bitcoin.entities.BitcoinMarketPriceInformationRaw
 import com.gaelmarhic.data.features.bitcoin.entities.BitcoinMarketPriceRaw
 import io.reactivex.functions.Function
