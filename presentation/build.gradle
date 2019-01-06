@@ -12,6 +12,9 @@ dependencies {
     // Android
     implementation constraintLayout
     implementation supportAppCompatV7
+    implementation lifecycleLibraryRuntime
+    implementation lifecycleLibraryExtensions
+    kapt lifecycleLibraryCompiler
 
     // Unit testing
     testImplementation junit

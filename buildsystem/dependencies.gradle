@@ -6,6 +6,9 @@ ext {
     // Android libraries
     supportAppCompatV7 = "com.android.support:appcompat-v7:${supportLibrary_version}"
     constraintLayout = "com.android.support.constraint:constraint-layout:${constraintLayout_version}"
+    lifecycleLibraryRuntime = "android.arch.lifecycle:runtime:${lifecycleLibrary_version}"
+    lifecycleLibraryExtensions = "android.arch.lifecycle:extensions:${lifecycleLibrary_version}"
+    lifecycleLibraryCompiler = "android.arch.lifecycle:compiler:${lifecycleLibrary_version}"
 
     // Dagger
     dagger = "com.google.dagger:dagger:${dagger_version}"
