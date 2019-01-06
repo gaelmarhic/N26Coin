@@ -1,13 +1,9 @@
 package com.gaelmarhic.presentation.features.bitcoin.activities
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
 import com.gaelmarhic.presentation.R
+import com.gaelmarhic.presentation.base.BaseActivity
 
-class BitcoinMarketPriceActivity : AppCompatActivity() {
+class BitcoinMarketPriceActivity: BaseActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bitcoin_market_price)
-    }
+    override fun getLayoutId(): Int = R.layout.activity_bitcoin_market_price
 }
