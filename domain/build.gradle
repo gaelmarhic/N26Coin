@@ -5,6 +5,11 @@ dependencies {
     // Kotlin
     implementation kotlinStandardLibrary
 
+    // Dagger
+    implementation dagger
+    kapt daggerCompiler
+    kapt daggerAndroidProcessor
+
     // Rx
     implementation rxJava2
 
