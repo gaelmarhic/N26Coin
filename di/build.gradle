@@ -4,9 +4,6 @@ apply from: "${rootDir}/buildsystem/android-module.gradle"
 dependencies {
 
     // Modules
-    implementation project(":presentation")
-    implementation project(":domain")
-    implementation project(":data")
 
     // Kotlin
     implementation kotlinStandardLibrary

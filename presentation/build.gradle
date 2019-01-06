@@ -1,5 +1,11 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 apply from: "${rootDir}/buildsystem/android-module.gradle"
+
+android {
+    defaultConfig {
+        applicationId n26coinApplicationId
+    }
+}
 
 dependencies {
 

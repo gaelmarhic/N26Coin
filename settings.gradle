@@ -1,4 +1,3 @@
-include ':app'
 include ':di'
 include ':presentation'
 include ':domain'
