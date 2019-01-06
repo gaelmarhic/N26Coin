@@ -24,7 +24,10 @@ dependencies {
 
     // Dagger
     implementation dagger
+    implementation daggerAndroid
+    implementation daggerAndroidSupport
     kapt daggerCompiler
+    kapt daggerAndroidProcessor
 
     // Unit testing
     testImplementation junit
