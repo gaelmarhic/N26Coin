@@ -1,18 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.gaelmarhic.presentation"
-    tools:ignore="GoogleAppIndexingWarning">
+    package="com.gaelmarhic.presentation">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <application
-        android:name="com.gaelmarhic.presentation.application.N26CoinApplication"
-        android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+    <application>
 
         <activity android:name="com.gaelmarhic.presentation.features.bitcoin.activities.BitcoinMarketPriceActivity">
             <intent-filter>

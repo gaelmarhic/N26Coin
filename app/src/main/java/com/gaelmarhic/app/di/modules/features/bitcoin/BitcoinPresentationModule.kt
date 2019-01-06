@@ -1,4 +1,4 @@
-package com.gaelmarhic.presentation.features.bitcoin.di
+package com.gaelmarhic.app.di.modules.features.bitcoin
 
 import dagger.Module
 

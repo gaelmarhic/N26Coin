@@ -1,8 +1,8 @@
-package com.gaelmarhic.presentation.application
+package com.gaelmarhic.app.application
 
 import android.app.Activity
 import android.app.Application
-import com.gaelmarhic.presentation.di.components.DaggerApplicationComponent
+import com.gaelmarhic.app.di.components.DaggerApplicationComponent
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
