@@ -26,6 +26,9 @@ dependencies {
     // Rx
     implementation rxJava2
 
+    // Options
+    implementation options
+
     // Unit testing
     testImplementation junit
 
