@@ -25,8 +25,7 @@ class Memory<Value>(private val timestampProvider: TimestampProvider,
     /**
      * Lifespan used to determine whether the cache has expired or not.
      */
-    private val cacheLifespan: Option<Long>
-    get() = ofObj(timeOut)
+    private val cacheLifespan: Option<Long> by lazy { ofObj(timeOut) }
 
     /**
      * [HashMap] where the value will be stored.

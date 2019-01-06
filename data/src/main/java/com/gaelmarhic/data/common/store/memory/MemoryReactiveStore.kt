@@ -20,8 +20,9 @@ class MemoryReactiveStore<Value>(private val store: MemoryStore<Value>): Reactiv
     /**
      * [Subject] used to propagate the [store]'s value updates.
      */
-    private val subject: Subject<Option<Value>>
-    get() = PublishSubject.create<Option<Value>>().toSerialized()
+    private val subject: Subject<Option<Value>> by lazy {
+        PublishSubject.create<Option<Value>>().toSerialized()
+    }
 
     /**
      * Function used to store a value in the [ReactiveStore].
