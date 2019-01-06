@@ -22,6 +22,10 @@ dependencies {
     implementation lifecycleLibraryExtensions
     kapt lifecycleLibraryCompiler
 
+    // Dagger
+    implementation dagger
+    kapt daggerCompiler
+
     // Unit testing
     testImplementation junit
 
