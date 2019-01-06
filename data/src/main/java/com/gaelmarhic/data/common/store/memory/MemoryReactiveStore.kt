@@ -1,7 +1,6 @@
 package com.gaelmarhic.data.common.store.memory
 
 import com.gaelmarhic.data.common.store.ReactiveStore
-import com.gaelmarhic.data.common.store.Store.MemoryStore
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
@@ -15,7 +14,7 @@ import polanski.option.Option.ofObj
  *
  * Simplified version of the [MemoryReactiveStore] provided in https://github.com/n26/N26AndroidSamples.
  */
-class MemoryReactiveStore<Value>(private val store: MemoryStore<Value>): ReactiveStore<Value> {
+class MemoryReactiveStore<Value>(private val store: Memory<Value>): ReactiveStore<Value> {
 
     /**
      * [Subject] used to propagate the [store]'s value updates.

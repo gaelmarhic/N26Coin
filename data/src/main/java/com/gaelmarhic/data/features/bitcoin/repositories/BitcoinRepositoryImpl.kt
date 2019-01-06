@@ -1,6 +1,6 @@
 package com.gaelmarhic.data.features.bitcoin.repositories
 
-import com.gaelmarhic.data.common.store.ReactiveStore
+import com.gaelmarhic.data.common.store.memory.MemoryReactiveStore
 import com.gaelmarhic.data.features.bitcoin.mappers.BitcoinMarketPriceInformationMapper
 import com.gaelmarhic.data.features.bitcoin.network.BitcoinService
 import com.gaelmarhic.domain.features.bitcoin.entities.BitcoinMarketPriceInformation
@@ -16,7 +16,7 @@ import io.reactivex.schedulers.Schedulers
  * found in the domain module. It has been done this way in order to respect the Dependency
  * Inversion principle from SOLID.
  */
-class BitcoinRepositoryImpl(private val store: ReactiveStore<BitcoinMarketPriceInformation>,
+class BitcoinRepositoryImpl(private val store: MemoryReactiveStore<BitcoinMarketPriceInformation>,
                             private val bitcoinService: BitcoinService,
                             private val mapper: BitcoinMarketPriceInformationMapper): BitcoinRepository {
 

@@ -26,4 +26,19 @@ dependencies {
     implementation daggerAndroidSupport
     kapt daggerCompiler
     kapt daggerAndroidProcessor
+
+    // Rx
+    implementation rxJava2
+
+    // Gson
+    implementation gson
+
+    // Retrofit2
+    implementation retrofit2
+    implementation retrofit2RxAdapter
+    implementation retrofit2GsonConverter
+
+    // OkHttp3
+    implementation okHttp3
+    implementation okHttp3LoggingInterceptor
 }
