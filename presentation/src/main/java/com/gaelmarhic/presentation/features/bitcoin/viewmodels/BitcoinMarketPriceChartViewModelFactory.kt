@@ -16,6 +16,6 @@ class BitcoinMarketPriceChartViewModelFactory @Inject constructor(
         ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return BitcoinMarketPriceChartViewModel() as T
+        return BitcoinMarketPriceChartViewModel(retrieveUseCase, mapper) as T
     }
 }
