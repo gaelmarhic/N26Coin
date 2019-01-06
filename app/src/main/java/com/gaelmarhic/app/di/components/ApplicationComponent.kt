@@ -5,6 +5,7 @@ import com.gaelmarhic.app.application.N26CoinApplication
 import com.gaelmarhic.app.di.activities.ActivityBindings
 import com.gaelmarhic.app.di.modules.DataModule
 import com.gaelmarhic.app.di.modules.DomainModule
+import com.gaelmarhic.app.di.modules.PresentationModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -17,6 +18,7 @@ import javax.inject.Singleton
 @Component(modules = [
     AndroidInjectionModule::class,
     ActivityBindings::class,
+    PresentationModule::class,
     DomainModule::class,
     DataModule::class])
 interface ApplicationComponent {
