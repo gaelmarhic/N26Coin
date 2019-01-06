@@ -2,7 +2,7 @@
     package="com.gaelmarhic.presentation">
 
     <application>
-        <activity android:name=".bitcoin.BitcoinMarketPriceActivity">
+        <activity android:name="com.gaelmarhic.presentation.features.bitcoin.BitcoinMarketPriceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

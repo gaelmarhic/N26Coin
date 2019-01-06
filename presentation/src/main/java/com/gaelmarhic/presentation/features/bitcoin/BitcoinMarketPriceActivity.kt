@@ -1,4 +1,4 @@
-package com.gaelmarhic.presentation.bitcoin
+package com.gaelmarhic.presentation.features.bitcoin
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
