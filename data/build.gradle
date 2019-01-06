@@ -8,6 +8,10 @@ dependencies {
     // Kotlin
     implementation kotlinStandardLibrary
 
+    // Dagger
+    implementation dagger
+    kapt daggerCompiler
+
     // Rx
     implementation rxJava2
 
