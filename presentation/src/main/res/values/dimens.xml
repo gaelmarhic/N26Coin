@@ -9,8 +9,8 @@
 
     <!-- BitcoinMarketPriceActivity -->
     <dimen name="bitcoin_market_price_activity_title_margin_top">8dp</dimen>
-    <dimen name="bitcoin_market_price_activity_title_text_size">24sp</dimen>
-    <dimen name="bitcoin_market_price_activity_space_margin_top">96dp</dimen>
+    <dimen name="bitcoin_market_price_activity_title_text_size">28sp</dimen>
+    <dimen name="bitcoin_market_price_activity_space_margin_top">128dp</dimen>
     <dimen name="bitcoin_market_price_activity_chart_card_view_margin">32dp</dimen>
     <dimen name="bitcoin_market_price_activity_chart_card_view_corner_radius">8dp</dimen>
     <dimen name="bitcoin_market_price_activity_chart_card_view_elevation">24dp</dimen>
