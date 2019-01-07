@@ -7,6 +7,6 @@ package com.gaelmarhic.domain.features.bitcoin.entities
  * @property amount The bitcoin's value corresponding to the given [timestamp].
  */
 data class BitcoinMarketPrice(
-        private val timestamp: Long,
-        private val amount: Float
+        val timestamp: Long,
+        val amount: Float
 )
