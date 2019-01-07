@@ -12,6 +12,8 @@ dependencies {
     // Android
     implementation constraintLayout
     implementation supportAppCompatV7
+    implementation cardView
+    implementation design
     implementation lifecycleLibraryRuntime
     implementation lifecycleLibraryExtensions
     kapt lifecycleLibraryCompiler
@@ -31,6 +33,7 @@ dependencies {
 
     // MPAndroidChart
     implementation mpAndroidChart
+
     // Unit testing
     testImplementation junit
 
