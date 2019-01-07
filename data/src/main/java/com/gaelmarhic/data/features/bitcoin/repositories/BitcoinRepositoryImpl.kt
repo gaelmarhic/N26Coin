@@ -23,10 +23,11 @@ class BitcoinRepositoryImpl(private val store: MemoryReactiveStore<BitcoinMarket
     /**
      * Function used to fetch the Bitcoin's market price information from the Blockchain's API.
      *
+     * @param timeSpan Duration of the chart.
      * @return Returns a [Completable].
      */
-    override fun fetchBitcoinMarketPriceInformation(): Completable =
-            bitcoinService.fetchBitcoinMarketPrice()
+    override fun fetchBitcoinMarketPriceInformation(timeSpan: String): Completable =
+            bitcoinService.fetchBitcoinMarketPrice(timeSpan)
                     .subscribeOn(Schedulers.io())
                     .observeOn(Schedulers.computation())
                     .map(mapper)

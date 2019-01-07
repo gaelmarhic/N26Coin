@@ -17,9 +17,10 @@ interface BitcoinRepository {
     /**
      * Function used to fetch the Bitcoin's market price information from the Blockchain's API.
      *
+     * @param timeSpan Duration of the chart.
      * @return Returns a [Completable].
      */
-    fun fetchBitcoinMarketPriceInformation(): Completable
+    fun fetchBitcoinMarketPriceInformation(timeSpan: String): Completable
 
     /**
      * Function used to get the stream of the Bitcoin's market price information.

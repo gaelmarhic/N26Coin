@@ -16,6 +16,14 @@ import polanski.option.Option
 class RetrieveBitcoinMarketPriceInformationUseCase(private val bitcoinRepository: BitcoinRepository):
         RetrieveInteractor<Void, BitcoinMarketPriceInformation> {
 
+    companion object {
+
+        /**
+         * Duration of the chart that we want for this sample.
+         */
+        const val TIME_SPAN = "30days"
+    }
+
     /**
      * Function that returns an [Observable] that will emit updates of the Bitcoin market price
      * information.
@@ -34,6 +42,6 @@ class RetrieveBitcoinMarketPriceInformationUseCase(private val bitcoinRepository
      * @return Returns a [Single].
      */
     private fun fetchWhenNone(marketPriceInformation: Option<BitcoinMarketPriceInformation>) =
-            if (marketPriceInformation.isNone) bitcoinRepository.fetchBitcoinMarketPriceInformation()
+            if (marketPriceInformation.isNone) bitcoinRepository.fetchBitcoinMarketPriceInformation(TIME_SPAN)
             else { Completable.complete() }.andThen(just(marketPriceInformation))
 }
