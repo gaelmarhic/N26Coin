@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Defaults -->
+    <dimen name="default_cardview_corner_radius">4dp</dimen>
+
+    <!-- Bitcoin market price LineChart MarkerView -->
+    <dimen name="bitcoin_market_price_linechart_markerview_inner_padding">8dp</dimen>
+
+</resources>
