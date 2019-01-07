@@ -42,6 +42,7 @@ ext {
 
     // Unit testing
     junit = "junit:junit:${junit_version}"
+    mockK = "io.mockk:mockk:${mockk_version}"
 
     // Instrumentation testing
     androidTestRunner = "com.android.support.test:runner:${androidTest_version}"

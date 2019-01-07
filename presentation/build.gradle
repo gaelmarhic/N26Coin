@@ -36,6 +36,7 @@ dependencies {
 
     // Unit testing
     testImplementation junit
+    testImplementation mockK
 
     // Instrumentation testing
     androidTestImplementation androidTestRunner

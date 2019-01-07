@@ -20,6 +20,7 @@ ext {
 
     // Unit testing
     junit_version = '4.12'
+    mockk_version = '1.9.kotlin12'
 
     // Instrumentation testing
     androidTest_version = '1.0.2'
