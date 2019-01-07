@@ -4,11 +4,12 @@
     <!-- Defaults -->
     <dimen name="default_cardview_corner_radius">4dp</dimen>
 
+    <!-- Common -->
+    <dimen name="toolbar_logo_size">48dp</dimen>
+
     <!-- BitcoinMarketPriceActivity -->
-    <dimen name="bitcoin_market_price_activity_title_margin_top">40dp</dimen>
-    <dimen name="bitcoin_market_price_activity_title_margin_start">24dp</dimen>
+    <dimen name="bitcoin_market_price_activity_title_margin_top">8dp</dimen>
     <dimen name="bitcoin_market_price_activity_title_text_size">24sp</dimen>
-    <dimen name="bitcoin_market_price_activity_bitcoin_image_size">80dp</dimen>
     <dimen name="bitcoin_market_price_activity_space_margin_top">96dp</dimen>
     <dimen name="bitcoin_market_price_activity_chart_card_view_margin">32dp</dimen>
     <dimen name="bitcoin_market_price_activity_chart_card_view_corner_radius">8dp</dimen>

@@ -15,12 +15,14 @@
         <TextView
             android:id="@+id/topTextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"/>
 
         <TextView
             android:id="@+id/bottomTextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"/>
 
     </LinearLayout>
 

@@ -15,31 +15,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/space" />
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="@dimen/toolbar_logo_size"
+            android:layout_height="@dimen/toolbar_logo_size"
+            android:layout_gravity="center"
+            android:src="@drawable/n26_white_logo"
+            tools:ignore="ContentDescription" />
+
+    </android.support.v7.widget.Toolbar>
+
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/bitcoin_market_price_activity_title_margin_top"
-        android:layout_marginStart="@dimen/bitcoin_market_price_activity_title_margin_start"
+        android:gravity="center"
         android:text="@string/bitcoin_market_price_activity_title"
         android:textColor="@android:color/white"
         android:textSize="@dimen/bitcoin_market_price_activity_title_text_size"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/bitcoinImage" />
-
-    <ImageView
-        android:id="@+id/bitcoinImage"
-        android:layout_width="@dimen/bitcoin_market_price_activity_bitcoin_image_size"
-        android:layout_height="@dimen/bitcoin_market_price_activity_bitcoin_image_size"
-        android:src="@drawable/bitcoin_icon"
-        app:layout_constraintTop_toTopOf="@id/topBackgroundColoredView"
-        app:layout_constraintBottom_toTopOf="@id/chartCardView"
-        app:layout_constraintStart_toStartOf="@id/topBackgroundColoredView"
-        app:layout_constraintEnd_toEndOf="@id/topBackgroundColoredView"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <android.support.v4.widget.Space
         android:id="@+id/space"
