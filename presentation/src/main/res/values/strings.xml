@@ -1,3 +1,9 @@
 <resources>
+
+    <!-- App -->
     <string name="app_name">N26Coin</string>
+
+    <!-- BitcoinMarketPriceActivity -->
+    <string name="bitcoin_market_price_activity_title">Bitcoin market price</string>
+
 </resources>
