@@ -29,6 +29,8 @@ dependencies {
     // Options
     implementation options
 
+    // MPAndroidChart
+    implementation mpAndroidChart
     // Unit testing
     testImplementation junit
 

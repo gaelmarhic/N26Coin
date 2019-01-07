@@ -35,6 +35,9 @@ ext {
     // Options
     options = "com.github.tomaszpolanski:options:${options_version}"
 
+    // MPAndroidChart
+    mpAndroidChart = "com.github.PhilJay:MPAndroidChart:${mpAndroidChart_version}"
+
     // Unit testing
     junit = "junit:junit:${junit_version}"
 
