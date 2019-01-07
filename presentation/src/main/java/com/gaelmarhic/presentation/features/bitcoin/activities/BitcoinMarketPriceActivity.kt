@@ -10,6 +10,7 @@ import com.gaelmarhic.presentation.R
 import com.gaelmarhic.presentation.base.BaseInjectingActivity
 import com.gaelmarhic.presentation.common.constants.Constants.Companion.SHORT_DATE_FORMAT
 import com.gaelmarhic.presentation.common.extensions.getFormattedDateFromTimestamp
+import com.gaelmarhic.presentation.common.extensions.toast
 import com.gaelmarhic.presentation.features.bitcoin.entities.BitcoinMarketPriceInformationChartViewEntity
 import com.gaelmarhic.presentation.features.bitcoin.uicomponents.BitcoinMarketPriceLineChartMarkerView
 import com.gaelmarhic.presentation.features.bitcoin.viewmodels.BitcoinMarketPriceChartViewModel
@@ -69,8 +70,29 @@ class BitcoinMarketPriceActivity: BaseInjectingActivity() {
      */
     private fun configureBottomNavigationBar() {
         bottomNavigationView.setOnNavigationItemSelectedListener {
+            val text = getString(R.string.feature_not_implemented_yet)
             when(it.itemId) {
-                // TODO: To be implemented.
+                R.id.bottom_navigation_bar_money_icon -> {
+                    toast(text)
+                    true
+                }
+                R.id.bottom_navigation_bar_card_icon -> {
+                    toast(text)
+                    true
+                }
+                R.id.bottom_navigation_bar_plus_icon -> {
+                    toast(text)
+                    true
+                }
+                R.id.bottom_navigation_bar_notification_icon -> {
+                    toast(text)
+                    true
+                }
+                R.id.bottom_navigation_bar_user_icon -> {
+                    toast(text)
+                    true
+                }
+                else -> { false }
             }
         }
     }

@@ -3,6 +3,9 @@
     <!-- App -->
     <string name="app_name">N26Coin</string>
 
+    <!-- Common -->
+    <string name="feature_not_implemented_yet">Feature not implemented yet!</string>
+
     <!-- BitcoinMarketPriceActivity -->
     <string name="bitcoin_market_price_activity_title">Bitcoin market price</string>
     <string name="bitcoin_market_price_activity_chart_placeholder_text">Sorry, nothing to show at the moment</string>
