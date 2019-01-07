@@ -3,12 +3,19 @@
 
     <application>
 
-        <activity android:name="com.gaelmarhic.presentation.features.bitcoin.activities.BitcoinMarketPriceActivity">
+        <activity android:name=".features.splash.SplashActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreenTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+        <activity android:name="com.gaelmarhic.presentation.features.bitcoin.activities.BitcoinMarketPriceActivity" />
 
     </application>
 

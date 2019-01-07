@@ -8,9 +8,9 @@
     <application
         android:name="com.gaelmarhic.app.application.N26CoinApplication"
         android:allowBackup="false"
-        android:icon="@drawable/bitcoin_icon"
+        android:icon="@drawable/bitcoin_logo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/bitcoin_icon"
+        android:roundIcon="@drawable/bitcoin_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" />
 
