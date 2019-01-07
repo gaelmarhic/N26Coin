@@ -3,6 +3,12 @@
     package="com.gaelmarhic.app"
     tools:ignore="GoogleAppIndexingWarning">
 
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="false"
+        android:xlargeScreens="false"/>
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
