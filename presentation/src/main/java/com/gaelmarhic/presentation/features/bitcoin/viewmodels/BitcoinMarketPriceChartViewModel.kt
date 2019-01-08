@@ -4,7 +4,9 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.gaelmarhic.domain.features.bitcoin.usecases.RetrieveBitcoinMarketPriceInformationUseCase
-import com.gaelmarhic.presentation.features.bitcoin.entities.BitcoinMarketPriceInformationChartViewEntity
+import com.gaelmarhic.presentation.common.streams.StreamState
+import com.gaelmarhic.presentation.common.streams.StreamState.Retrieved
+import com.gaelmarhic.presentation.common.streams.StreamState.Failed
 import com.gaelmarhic.presentation.features.bitcoin.mappers.BitcoinMarketPriceInformationChartViewEntityMapper
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -20,7 +22,7 @@ class BitcoinMarketPriceChartViewModel(
     /**
      * [LiveData] that will notify the UI when any change occurs in the data set.
      */
-    val bitcoinMarketPriceInformationLiveData = MutableLiveData<BitcoinMarketPriceInformationChartViewEntity>()
+    val bitcoinMarketPriceInformationLiveData = MutableLiveData<StreamState>()
 
     /**
      * [CompositeDisposable] that will be used to manage the downcoming streams.
@@ -41,8 +43,10 @@ class BitcoinMarketPriceChartViewModel(
             retrieveUseCase.getBehaviorStream(none())
                 .observeOn(Schedulers.computation())
                 .map(mapper)
-                .subscribe(bitcoinMarketPriceInformationLiveData::postValue) {
-                    // TODO: Error handling. To be implemented.
+                .subscribe({
+                    bitcoinMarketPriceInformationLiveData.postValue((Retrieved(it)))
+                }) {
+                    bitcoinMarketPriceInformationLiveData.postValue(Failed)
                 }
 
     /**

@@ -11,6 +11,9 @@ import com.gaelmarhic.presentation.base.BaseInjectingActivity
 import com.gaelmarhic.presentation.common.constants.Constants.Companion.SHORT_DATE_FORMAT
 import com.gaelmarhic.presentation.common.extensions.getFormattedDateFromTimestamp
 import com.gaelmarhic.presentation.common.extensions.toast
+import com.gaelmarhic.presentation.common.streams.StreamState
+import com.gaelmarhic.presentation.common.streams.StreamState.Failed
+import com.gaelmarhic.presentation.common.streams.StreamState.Retrieved
 import com.gaelmarhic.presentation.features.bitcoin.entities.BitcoinMarketPriceInformationChartViewEntity
 import com.gaelmarhic.presentation.features.bitcoin.uicomponents.BitcoinMarketPriceLineChartMarkerView
 import com.gaelmarhic.presentation.features.bitcoin.viewmodels.BitcoinMarketPriceChartViewModel
@@ -52,7 +55,7 @@ class BitcoinMarketPriceActivity: BaseInjectingActivity() {
                 .get(BitcoinMarketPriceChartViewModel::class.java)
 
         viewModel.bitcoinMarketPriceInformationLiveData.observe(
-                this, Observer { updateScreen(it) })
+                this, Observer { handleViewModelLiveDataEvents(it) })
     }
 
     /**
@@ -93,6 +96,25 @@ class BitcoinMarketPriceActivity: BaseInjectingActivity() {
                     true
                 }
                 else -> { false }
+            }
+        }
+    }
+
+    /**
+     * Function that is in charge of handling the events from the ViewModel's Livedata.
+     *
+     * @param streamState The current state of the stream.
+     */
+    private fun handleViewModelLiveDataEvents(streamState: StreamState?) {
+
+        when(streamState) {
+            is Retrieved -> {
+                updateScreen(streamState.content as? BitcoinMarketPriceInformationChartViewEntity)
+            }
+            is Failed -> {
+                // TODO: If I had had more time, I would have implemented a retry mechanism.
+                // TODO: Since I have not had enough time, it is just a toast :)
+                toast(getString(R.string.fetching_error_message))
             }
         }
     }

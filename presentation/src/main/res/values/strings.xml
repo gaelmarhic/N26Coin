@@ -5,6 +5,7 @@
 
     <!-- Common -->
     <string name="feature_not_implemented_yet">Feature not implemented yet!</string>
+    <string name="fetching_error_message">Uppps, there has been an issue fetching your data. Sorry!</string>
 
     <!-- BitcoinMarketPriceActivity -->
     <string name="bitcoin_market_price_activity_title">Bitcoin market price</string>
