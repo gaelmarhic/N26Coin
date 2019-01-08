@@ -5,10 +5,12 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.gaelmarhic.domain.features.bitcoin.usecases.RetrieveBitcoinMarketPriceInformationUseCase
 import com.gaelmarhic.presentation.common.streams.StreamState
+import com.gaelmarhic.presentation.common.streams.StreamState.Getting
 import com.gaelmarhic.presentation.common.streams.StreamState.Retrieved
 import com.gaelmarhic.presentation.common.streams.StreamState.Failed
 import com.gaelmarhic.presentation.features.bitcoin.mappers.BitcoinMarketPriceInformationChartViewEntityMapper
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import polanski.option.Option.none
 
@@ -38,9 +40,12 @@ class BitcoinMarketPriceChartViewModel(
 
     /**
      * Function in charge of binding the downcoming streams to the [CompositeDisposable].
+     *
+     * @return Returns a [Disposable].
      */
-    private fun bindToBitcoinMarketPriceInformation() =
-            retrieveUseCase.getBehaviorStream(none())
+    private fun bindToBitcoinMarketPriceInformation(): Disposable {
+        bitcoinMarketPriceInformationLiveData.postValue(Getting)
+        return retrieveUseCase.getBehaviorStream(none())
                 .observeOn(Schedulers.computation())
                 .map(mapper)
                 .subscribe({
@@ -48,6 +53,7 @@ class BitcoinMarketPriceChartViewModel(
                 }) {
                     bitcoinMarketPriceInformationLiveData.postValue(Failed)
                 }
+    }
 
     /**
      * When this [ViewModel] is cleared, we release the downcoming streams.

@@ -6,12 +6,15 @@ import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import com.gaelmarhic.presentation.R
 import com.gaelmarhic.presentation.base.BaseInjectingActivity
 import com.gaelmarhic.presentation.common.constants.Constants.Companion.SHORT_DATE_FORMAT
 import com.gaelmarhic.presentation.common.extensions.getFormattedDateFromTimestamp
 import com.gaelmarhic.presentation.common.extensions.toast
 import com.gaelmarhic.presentation.common.streams.StreamState
+import com.gaelmarhic.presentation.common.streams.StreamState.Getting
 import com.gaelmarhic.presentation.common.streams.StreamState.Failed
 import com.gaelmarhic.presentation.common.streams.StreamState.Retrieved
 import com.gaelmarhic.presentation.features.bitcoin.entities.BitcoinMarketPriceInformationChartViewEntity
@@ -108,12 +111,17 @@ class BitcoinMarketPriceActivity: BaseInjectingActivity() {
     private fun handleViewModelLiveDataEvents(streamState: StreamState?) {
 
         when(streamState) {
+            is Getting -> {
+                progressBar.visibility = VISIBLE
+            }
             is Retrieved -> {
+                progressBar.visibility = GONE
                 updateScreen(streamState.content as? BitcoinMarketPriceInformationChartViewEntity)
             }
             is Failed -> {
                 // TODO: If I had had more time, I would have implemented a retry mechanism.
                 // TODO: Since I have not had enough time, it is just a toast :)
+                progressBar.visibility = GONE
                 toast(getString(R.string.fetching_error_message))
             }
         }
