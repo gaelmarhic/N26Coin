@@ -21,6 +21,7 @@ import com.gaelmarhic.presentation.features.bitcoin.entities.BitcoinMarketPriceI
 import com.gaelmarhic.presentation.features.bitcoin.uicomponents.BitcoinMarketPriceLineChartMarkerView
 import com.gaelmarhic.presentation.features.bitcoin.viewmodels.BitcoinMarketPriceChartViewModel
 import com.gaelmarhic.presentation.features.bitcoin.viewmodels.BitcoinMarketPriceChartViewModelFactory
+import com.github.mikephil.charting.charts.Chart.PAINT_INFO
 import com.github.mikephil.charting.components.XAxis.XAxisPosition.BOTTOM
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
@@ -69,6 +70,8 @@ class BitcoinMarketPriceActivity: BaseInjectingActivity() {
         // Empty view
         chart.setNoDataText(getString(R.string.bitcoin_market_price_activity_chart_placeholder_text))
         chart.setNoDataTextColor(ContextCompat.getColor(this, android.R.color.black))
+        val noDataTextSize = resources.getDimensionPixelSize(R.dimen.bitcoin_market_price_activity_chart_no_data_text_size).toFloat()
+        chart.getPaint(PAINT_INFO).textSize = noDataTextSize
     }
 
     /**
