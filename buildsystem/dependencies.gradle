@@ -43,6 +43,7 @@ ext {
     // Unit testing
     junit = "junit:junit:${junit_version}"
     mockK = "io.mockk:mockk:${mockk_version}"
+    architectureComponentsTesting = "android.arch.core:core-testing:${lifecycleLibrary_version}"
 
     // Instrumentation testing
     androidTestRunner = "com.android.support.test:runner:${androidTest_version}"
