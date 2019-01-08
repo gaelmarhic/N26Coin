@@ -38,8 +38,4 @@ dependencies {
     testImplementation junit
     testImplementation mockK
     testImplementation architectureComponentsTesting
-
-    // Instrumentation testing
-    androidTestImplementation androidTestRunner
-    androidTestImplementation espresso
 }

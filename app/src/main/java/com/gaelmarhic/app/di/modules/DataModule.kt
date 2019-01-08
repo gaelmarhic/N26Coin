@@ -1,5 +1,6 @@
 package com.gaelmarhic.app.di.modules
 
+import com.gaelmarhic.app.annotations.OpenForTesting
 import com.gaelmarhic.app.extensions.enableLogs
 import com.gaelmarhic.app.extensions.setFailureHandler
 import com.gaelmarhic.data.common.constants.Constants
@@ -24,6 +25,7 @@ import javax.inject.Singleton
 /**
  * Created by Gaël Marhic on 06/01/2019.
  */
+@OpenForTesting
 @Module
 class DataModule {
 

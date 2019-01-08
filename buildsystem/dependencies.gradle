@@ -47,5 +47,8 @@ ext {
 
     // Instrumentation testing
     androidTestRunner = "com.android.support.test:runner:${androidTest_version}"
+    androidTestRules = "com.android.support.test:rules:${androidTest_version}"
+    androidTestOrchestrator = "com.android.support.test:orchestrator:${androidTest_version}"
     espresso = "com.android.support.test.espresso:espresso-core:${espresso_version}"
+    mockWebServer = "com.squareup.okhttp3:mockwebserver:${mockWebServer_version}"
 }

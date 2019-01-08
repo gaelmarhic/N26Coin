@@ -25,4 +25,5 @@ ext {
     // Instrumentation testing
     androidTest_version = '1.0.2'
     espresso_version = '3.0.2'
+    mockWebServer_version = '3.6.0'
 }

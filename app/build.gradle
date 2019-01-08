@@ -1,10 +1,15 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-allopen'
 apply from: "${rootDir}/buildsystem/android-module.gradle"
 
 android {
     defaultConfig {
         applicationId n26coinApplicationId
     }
+}
+
+allOpen {
+    annotation('com.gaelmarhic.app.annotations.OpenForTesting')
 }
 
 dependencies {
@@ -41,4 +46,11 @@ dependencies {
     // OkHttp3
     implementation okHttp3
     implementation okHttp3LoggingInterceptor
+
+    // Instrumentation testing
+    androidTestImplementation androidTestRunner
+    androidTestImplementation androidTestRules
+    androidTestImplementation espresso
+    androidTestImplementation mockWebServer
+    androidTestUtil androidTestOrchestrator
 }

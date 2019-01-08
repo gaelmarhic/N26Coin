@@ -12,7 +12,8 @@ android {
         targetSdkVersion androidTargetSdkVersion
         versionCode applicationVersionCode
         versionName applicationVersionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.gaelmarhic.app.testutils.runners.N26CoinRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
     }
     buildTypes {
         release {
@@ -23,6 +24,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    testOptions {
+        execution 'ANDROID_TEST_ORCHESTRATOR'
     }
     packagingOptions {
         exclude 'META-INF/proguard/androidx-annotations.pro'

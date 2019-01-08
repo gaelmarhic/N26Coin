@@ -29,6 +29,7 @@ interface ApplicationComponent {
     interface Builder {
         @BindsInstance
         fun application(app: Application): Builder
+        fun dataModule(dataModule: DataModule): Builder
         fun build(): ApplicationComponent
     }
 }
