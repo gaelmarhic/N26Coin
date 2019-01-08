@@ -2,6 +2,7 @@ package com.gaelmarhic.presentation.features.bitcoin.uicomponents
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Canvas
 import com.gaelmarhic.presentation.R
 import com.gaelmarhic.presentation.common.constants.Constants.Companion.LONG_DATE_FORMAT
 import com.gaelmarhic.presentation.common.constants.Constants.Companion.THOUSANDS_SEPARATOR
@@ -20,6 +21,11 @@ import kotlinx.android.synthetic.main.bitcoin_market_price_linechart_markerview.
 class BitcoinMarketPriceLineChartMarkerView(private val currency: String,
                                             context: Context):
         MarkerView(context, R.layout.bitcoin_market_price_linechart_markerview) {
+
+    /**
+     * Width of the device's screen.
+     */
+    private val screenWidthInPx = resources.displayMetrics.widthPixels
 
     /**
      * Offset used to position the [MarkerView] on the graph.
@@ -45,5 +51,19 @@ class BitcoinMarketPriceLineChartMarkerView(private val currency: String,
         }
 
         return customOffset as MPPointF
+    }
+
+    override fun draw(canvas: Canvas, posX: Float, posY: Float) {
+
+        var newPosX = posX
+
+        val width = width
+        if (screenWidthInPx - newPosX - width < width) {
+            newPosX -= width.toFloat()
+        }
+
+        canvas.translate(newPosX, posY)
+        draw(canvas)
+        canvas.translate(-newPosX, -posY)
     }
 }
