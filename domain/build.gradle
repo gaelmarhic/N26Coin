@@ -18,4 +18,5 @@ dependencies {
 
     // Unit testing
     testImplementation junit
+    testImplementation mockK
 }
