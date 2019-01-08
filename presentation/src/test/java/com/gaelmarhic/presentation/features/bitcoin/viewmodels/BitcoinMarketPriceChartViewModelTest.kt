@@ -3,6 +3,7 @@ package com.gaelmarhic.presentation.features.bitcoin.viewmodels
 import android.arch.core.executor.testing.InstantTaskExecutorRule
 import com.gaelmarhic.domain.features.bitcoin.entities.BitcoinMarketPriceInformation
 import com.gaelmarhic.domain.features.bitcoin.usecases.RetrieveBitcoinMarketPriceInformationUseCase
+import com.gaelmarhic.presentation.common.streams.StreamState.Retrieved
 import com.gaelmarhic.presentation.features.bitcoin.entities.BitcoinMarketPriceInformationChartViewEntity
 import com.gaelmarhic.presentation.features.bitcoin.mappers.BitcoinMarketPriceInformationChartViewEntityMapper
 import com.gaelmarhic.presentation.testutils.RxSchedulerOverrideRule
@@ -10,6 +11,7 @@ import io.mockk.*
 import io.mockk.impl.annotations.MockK
 import io.reactivex.subjects.BehaviorSubject
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -112,6 +114,8 @@ class BitcoinMarketPriceChartViewModelTest {
         useCaseSubject.onNext(mockedBitcoinMarketPriceInformation)
 
         // Assertions
-        assertEquals(viewModel.bitcoinMarketPriceInformationLiveData.value, mockedViewEntity)
+        val streamState = viewModel.bitcoinMarketPriceInformationLiveData.value
+        assertTrue(streamState is Retrieved)
+        assertEquals((streamState as Retrieved).content, mockedViewEntity)
     }
 }
