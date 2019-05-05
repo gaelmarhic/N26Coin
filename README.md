@@ -8,7 +8,7 @@ What you will find in this App:
 * Architecture: MVVM, CLEAN, SOLID, Repository pattern.
 * Android Architecture Components: ViewModel, LiveData, Lifecycle.
 * Reactiveness: RxJava2
-* Dependency injection: Dagger.
+* Dependency injection: Dagger 2.
 * Network: Retrofit2, OkHttp3.
 * Testing: JUnit, MockK, MockWebServer, Espresso.
 * And: Gson, ConstraintLayout, Options, MPAndroidChart.
