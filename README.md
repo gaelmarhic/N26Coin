@@ -13,6 +13,6 @@ What you will find in this App:
 * Testing: JUnit, MockK, MockWebServer, Espresso.
 * And: Gson, ConstraintLayout, Options, MPAndroidChart.
 
-![N26Coin](https://user-images.githubusercontent.com/16627604/57197202-a78d9f80-6f64-11e9-9ac4-e34070f5d623.png)
+![N26Coin](https://user-images.githubusercontent.com/16627604/57197241-54681c80-6f65-11e9-8b9d-3046b845a322.png)
 
 Download the App clicking on this link: http://www.gaelmarhic.com/n26coin/N26Coin.apk
